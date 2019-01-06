@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>小酒馆</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				background-color: #efeff4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">小酒馆</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							热卖好物
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							名酒名庄
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							Top热搜
+						</a>
+						<a class="mui-control-item" href="#item4mobile">
+							红酒知识
+						</a>
+						<a class="mui-control-item" href="#item5mobile">
+							圈子
+						</a>
+						
+						
+					</div>
+				</div>
+				
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view mui-grid-view">
+								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+									<a href="#">
+										<img class="mui-media-object" src="images/7.jpg">
+										<div class="mui-media-body">原瓶进口红酒爱之湾起泡气泡葡萄酒</div></a></li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+									<a href="#">
+										<img class="mui-media-object" src="images/8.jpg">
+										<div class="mui-media-body">无酒精超健康西班牙愉悦甜无醇起泡葡萄酒凌晨</div></a></li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+									<a href="#"><img class="mui-media-object" src="images/19.jpg">
+										<div class="mui-media-body">爱丝巧克力酒 淡型不厚重清爽女士甜红葡萄酒</div></a></li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+									<a href="#">
+										<img class="mui-media-object" src="images/9.jpg">
+										<div class="mui-media-body">个性金属风 美绚莫斯卡托甜型起泡酒气泡酒甜酒</div></a></li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+									<a href="#">
+										<img class="mui-media-object" src="images/12.jpg">
+										<div class="mui-media-body">幸福就是可以一起睡觉</div></a></li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+									<a href="#">
+										<img class="mui-media-object" src="images/18.jpg">
+										<div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+									<a href="#"><img class="mui-media-object" src="images/cbd.jpg">
+										<div class="mui-media-body">Color of SIP CBD</div></a></li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+									<a href="#">
+										<img class="mui-media-object" src="images/20.jpg">
+										<div class="mui-media-body">静静看这世界</div></a></li>
+							
+							</ul>    
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<div class="mui-card">
+										<li class="mui-table-view-cell mui-media" id="xiedaoxiu">
+							        	<a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/10.jpg">
+							            <div class="mui-media-body">
+							               	慕拉冰酒
+							                <p class="mui-ellipsis">慕拉冰酒蓝钻冰白葡萄酒雷司令冰葡萄酒</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							   
+							    <li class="mui-table-view-cell mui-media" id="wuzhihui">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/11.jpg">
+							            <div class="mui-media-body">
+							               	 莫高红酒整
+							                <p class="mui-ellipsis">莫高红酒整箱6支装滴晶冰酒冰红冰白冰葡萄酒甜酒</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="zhanggaohuai">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/1112.jpg">
+							            <div class="mui-media-body">
+							               	 德国雷司令葡萄酒
+							                <p class="mui-ellipsis">德国雷司令自然酒原瓶进口甜白葡萄酒</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/1114.jpg">
+							            <div class="mui-media-body">
+							               	 拉菲红葡萄酒
+							                <p class="mui-ellipsis">拉菲官方正品原装瓶进口巴斯克花园干红葡萄酒</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/1115.jpg">
+							            <div class="mui-media-body">
+							               	 圣芝红酒
+							                <p class="mui-ellipsis">圣芝红酒法国波尔多AOC银奖干红原瓶进口珍藏葡萄酒</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="tangluoguwu">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/12.jpg">
+							            <div class="mui-media-body">
+							               	 法国AOP进口葡萄酒
+							                <p class="mui-ellipsis">法国AOP进口葡萄酒红酒整箱干红6支装</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="liyuqing">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/18.jpg">
+							            <div class="mui-media-body">
+							               	 智利名庄活灵魂干红酒
+							                <p class="mui-ellipsis">智利名庄活灵魂干红酒葡萄酒浪漫礼物原装进口特级珍藏级</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="tanrunyu">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/20.jpg">
+							            <div class="mui-media-body">
+							               	 醉鹅娘红葡萄酒
+							                <p class="mui-ellipsis">醉鹅娘智利鸟酒进口干红葡萄酒中央山谷梅洛红酒</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="liuguoquan">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/7.jpg">
+							            <div class="mui-media-body">
+							               	米勒图高雷瓦那白葡萄酒
+							                <p class="mui-ellipsis">德国原瓶进口米勒图高雷瓦那白葡萄酒半干型单支冰酒甜白红酒果酒</p>
+							            </div>
+							        </a>
+							    </li>-->
+							</div>
+						</div>
+					</div>
+				</div>
+	-->
+			<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					
+					<div class="mui-media-body">
+						小M
+						<p>发表于 2016-06-30 15:30</p>
+					</div>
+					<!--<img class="mui-pull-left" src="../images/logo.png" width="34px" height="34px" />
+					<h2>小M</h2>
+					<p>发表于 2016-06-30 15:30</p>-->
+				</div>
+				<div class="mui-card-content" >
+					<img src="images/11.jpg" alt="" width="100%"/>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">喜欢  14</a>
+					<a class="mui-card-link">评论  35</a>
+					<a class="mui-card-link">阅读更多 >></a>
+				</div>
+				
+			</div>
+			<div class="mui-card">
+							<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(images/1113.jpg)"></div>
+							<div class="mui-card-content">
+								<div class="mui-card-content-inner">
+									<p>拉菲珍宝（小拉菲）红葡萄酒 on January 18, 2016</p>
+									<p style="color: #333;">这是一款来自法国波尔多产区波雅克村的红葡萄酒，是拉菲酒庄的副牌红葡萄酒。一般而言，梅多克列级庄的副牌酒都是用比正牌酒质量稍差的葡萄来酿造的，这些葡萄或年份欠佳，或树龄不够，或品质尚且不够资格用于酿造正牌酒。</p>
+								</div>
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link">喜欢  40</a>
+								<a class="mui-card-link">阅读更多 >></a>
+							</div>
+						</div>
+						</div>
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-content">
+								<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+										<li class="mui-table-view-cell">
+												<div class="mui-table">
+														<div class="mui-table-cell mui-col-xs-10">
+																<h4 class="mui-ellipsis">干露酒庄(Concha y Toro)</h4>
+																<h5>干露酒庄（Concha y Toro）是智利最大的葡萄酒业集团，同时也是智利最古老的酒庄之一。</h5>
+																<p class="mui-h6 mui-ellipsis">该酒庄多次荣获世界最畅销葡萄酒品牌称号，现在已经成为全球第二大最受欢迎的葡萄酒品牌。</p>
+														</div>
+														<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+																<span class="mui-h5">12:25</span>
+														</div>
+												</div>
+										</li>
+										<li class="mui-table-view-cell">
+												<div class="mui-table">
+														<div class="mui-table-cell mui-col-xs-10">
+																<h4 class="mui-ellipsis-2">白莫斯卡托(Moscato Bianco</h4>
+																<h5>白莫斯卡托(Moscato Bianco)典型香气：甜瓜、蜂蜜、桃子、橙花、香料、玫瑰花和柑橘</h5>
+																<p class="mui-h6 mui-ellipsis">起源：白莫斯卡托（Moscato Bianco）是一个起源于希腊的葡萄品种。据说，是希腊人将白莫斯卡托传入了意大利，而罗马人则将其从意大利带到了法国地中海沿岸地区。</p>
+														</div>
+														<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+																<span class="mui-h5">12:25</span>
+																
+														</div>
+												</div>
+										</li>
+										<li class="mui-table-view-cell">
+												<div class="mui-table">
+														<div class="mui-table-cell mui-col-xs-10">
+																<h4 class="mui-ellipsis-2">伊塔塔谷(Itata)</h4>
+																<h5>伊塔塔谷（Itata Valley）位于智利首都圣地亚哥（Santiago）以南400公里（约250英里）处，是智利南部三大葡萄酒产区中最靠北的一个。</h5>
+																<p class="mui-h6 mui-ellipsis">伊塔塔谷的酿酒传统源远流长，早在殖民者时期，著名的海港城市康塞普西翁(Concepcion)附近就已经出现了一些葡萄园。</p>
+														</div>
+														<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+																<span class="mui-h5">12:25</span>
+																
+														</div>
+												</div>
+										</li>
+										<li class="mui-table-view-cell">
+												<div class="mui-table">
+														<div class="mui-table-cell mui-col-xs-10">
+																<h4 class="mui-ellipsis-2">木桐酒庄（Chateau Mouton Rothschild）</h4>
+																<h5>位于法国波尔多（Bordeaux）梅多克产区（Medoc）的波雅克（Pauillac）村，出产享誉世界的波尔多葡萄酒。</h5>
+																<p class="mui-h6 mui-ellipsis">在目前法国官方排名中，它位列波尔多五大一级庄（First Growth）之一，与拉菲古堡（Chateau Lafite Rothschild）、拉图城堡（Chateau Latour）、玛歌酒庄（Chateau Margaux）和侯伯王庄园（Chateau Haut-Brion）共享此殊荣。</p>
+														</div>
+														<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+																<span class="mui-h5">12:25</span>
+															
+														</div>
+												</div>
+										</li>
+										<li class="mui-table-view-cell">
+												<div class="mui-table">
+														<div class="mui-table-cell mui-col-xs-10">
+																<h4 class="mui-ellipsis-2">=桃乐丝酒庄（Torres）</h4>
+																<h5>于1870年创建，但桃乐丝家族早在17世纪就开始在佩内德斯（Penedes）古老的加泰罗尼亚（Catalonia）镇酿造葡萄酒。</h5>
+																<p class="mui-h6 mui-ellipsis">时至今日，桃乐丝已然成为西班牙最大的葡萄酒生产商，“桃乐丝”几乎成为了西班牙酒的代名词，物有所值的品质可以说是西班牙酒的荣誉标签。</p>
+														</div>
+														<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+																<span class="mui-h5">12:25</span>
+																
+														</div>
+												</div>
+										</li>
+								</ul>
+						</div>
+						</div>
+					</div>
+									
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-card">
+							<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(images/1.jpg)"></div>
+							<div class="mui-card-content">
+								<div class="mui-card-content-inner">
+									<p>拉菲珍宝（小拉菲）红葡萄酒 on January 18, 2016</p>
+									<p style="color: #333;">这是一款来自法国波尔多产区波雅克村的红葡萄酒，是拉菲酒庄的副牌红葡萄酒。一般而言，梅多克列级庄的副牌酒都是用比正牌酒质量稍差的葡萄来酿造的，这些葡萄或年份欠佳，或树龄不够，或品质尚且不够资格用于酿造正牌酒。</p>
+								</div>
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link">喜欢  40</a>
+								<a class="mui-card-link">阅读更多 >></a>
+							</div>
+						</div>
+						<div class="mui-card">
+							<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(images/8.jpg)"></div>
+							<div class="mui-card-content">
+								<div class="mui-card-content-inner">
+									<p>干露羊驼莫斯卡托甜白葡萄酒 on January 18, 2016</p>
+									<p style="color: #333;">这是一款来自智利伊塔塔谷产区的白葡萄酒，其酒液呈现出明亮的金黄色，散发着清新的水果香气、花香及一丝蜂蜜的香气。这款甜酒带有恰到好处的酸度，回味持久，适合搭配开胃冷餐、奶酪、扇贝及奶油甜点等。</p>
+								</div>
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link">Like</a>
+								<a class="mui-card-link">Read more</a>
+							</div>
+						</div>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+			</div>
+		</div>
+		
+		<script >
+	    mui.init();
+	    mui('body').on('tap','a',function(){document.location.href=this.href;});
+		</script>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+		<script>
+	
+		mui.init();
+			document.getElementById('lixiansheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-1.html',
+				id:'lixiansheng'
+				});
+			});
+			document.getElementById('xiedaoxiu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2.html',
+				id:'xiedaoxiu'
+				});
+			});
+			document.getElementById('wuguanqiu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3.html',
+				id:'wuguanqiu'
+				});
+			});
+			document.getElementById('hongxiannv').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4.html',
+				id:'hongxiannv'
+				});
+			});
+			document.getElementById('yangpeihua').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5.html',
+				id:'yangpeihua'
+				});
+			});
+			document.getElementById('fengyanliang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6.html',
+				id:'fengyanliang'
+				});
+			});
+			document.getElementById('kanghuifang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7.html',
+				id:'kanghuifang'
+				});
+			});
+			document.getElementById('liangzhu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-8.html',
+				id:'langzhu'
+				});
+			});
+			document.getElementById('quyuxiang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9.html',
+				id:'quyuxiang'
+				});
+			});
+			document.getElementById('tangmaidugong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-10.html',
+				id:'tangmaidugong'
+				});
+			});
+			document.getElementById('hexichun').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-1-1.html',
+				id:'hexichun'
+				});
+			});
+			document.getElementById('yeenlin').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-1-2.html',
+				id:'yeenlin'
+				});
+			});
+			document.getElementById('wuzhihui').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-3.html',
+				id:'wuzhihui'
+				});
+			});
+			document.getElementById('zhanggaohuai').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-4.html',
+				id:'zhangaohuai'
+				});
+			});
+			document.getElementById('taoxingcai').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-5.html',
+				id:'taoxingcai'
+				});
+			});
+			document.getElementById('tangluoguwu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-6.html',
+				id:'tangluoguwu'
+				});
+			});
+			document.getElementById('liyuqing').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-7.html',
+				id:'liyuqing'
+				});
+			});
+			document.getElementById('tanrunyu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-8.html',
+				id:'tanrunyu'
+				});
+			});
+			document.getElementById('liuguoquan').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-9.html',
+				id:'liuguoquan'
+				});
+			});
+			document.getElementById('caizhanquan').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3-1.html',
+				id:'caizhanquan'
+				});
+			});
+			document.getElementById('huangruisheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3-2.html',
+				id:'huangruisheng'
+				});
+			});
+			document.getElementById('lirongzai').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3-3.html',
+				id:'lirongzai'
+				});
+			});
+			document.getElementById('yangwei').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3-4.html',
+				id:'yangwei'
+				});
+			});
+			document.getElementById('wuyancheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-1.html',
+				id:'wuyancheng'
+				});
+			});
+			document.getElementById('dingqingbo').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-2.html',
+				id:'dingqingbo'
+				});
+			});
+			document.getElementById('caozhanglin').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-3.html',
+				id:'dcaozhanglin'
+				});
+			});
+			document.getElementById('caijinzhen').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-4.html',
+				id:'caijinzhen'
+				});
+			});
+			document.getElementById('zhongjingjie').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-5.html',
+				id:'zhongjingjie'
+				});
+			});
+			document.getElementById('yanmutian').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-6.html',
+				id:'yanmutian'
+				});
+			});
+			document.getElementById('zhenshunying').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-7.html',
+				id:'zhenshunying'
+				});
+			});
+			document.getElementById('pengmeiying').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-8.html',
+				id:'pengmeiying'
+				});
+			});
+			document.getElementById('fangzhanrong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-9.html',
+				id:'fangzhanrong'
+				});
+			});
+			document.getElementById('luojiabao').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-10.html',
+				id:'luojiabao'
+				});
+			});
+			document.getElementById('shenmanli').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-1.html',
+				id:'shenmanli'
+				});
+			});
+			document.getElementById('wuyuchou').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-2.html',
+				id:'wuyuchou'
+				});
+			});
+			document.getElementById('youxueyao').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-3.html',
+				id:'youxueyao'
+				});
+			});
+			document.getElementById('xiaojianlan').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-4.html',
+				id:'xiaojianlan'
+				});
+			});
+			document.getElementById('zhoutianhe').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-5.html',
+				id:'zhoutianhe'
+				});
+			});
+			document.getElementById('linshaohong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-6.html',
+				id:'linshaohong'
+				});
+			});
+			document.getElementById('lizhngqiu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-7.html',
+				id:'lizhngqiu'
+				});
+			});
+			document.getElementById('zouqiang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-1.html',
+				id:'zouqiang'
+				});
+			});
+			document.getElementById('zhongchuping').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-2.html',
+				id:'zhongchuping'
+				});
+			});
+			document.getElementById('dengyongsheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-3.html',
+				id:'dengyongsheng'
+				});
+			});
+			document.getElementById('liangweiyong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-4.html',
+				id:'liangweiyong'
+				});
+			});
+			document.getElementById('zhushiming').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-5.html',
+				id:'zhushiming'
+				});
+			});
+			document.getElementById('huangliekai').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-6.html',
+				id:'huangliekai'
+				});
+			});
+			document.getElementById('linjinbing').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-7.html',
+				id:'linjinbing'
+				});
+			});
+			document.getElementById('huangxuewen').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-1.html',
+				id:'huangxuewen'
+				});
+			});
+			document.getElementById('kanghuilin').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-2.html',
+				id:'kanghuilin'
+				});
+			});
+			document.getElementById('liwei').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-3.html',
+				id:'liwei'
+				});
+			});
+			document.getElementById('wuguangrang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-4.html',
+				id:'wuguangrang'
+				});
+			});
+			document.getElementById('luzhigao').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-5.html',
+				id:'luzhigao'
+				});
+			});
+			document.getElementById('yangyurong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-6.html',
+				id:'yangyurong'
+				});
+			});
+			document.getElementById('liangqiusheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-8-1.html',
+				id:'liangqiusheng'
+				});
+			});
+			document.getElementById('fenghuainv').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-8-2.html',
+				id:'fenghuainv'
+				});
+			});
+			document.getElementById('yangxia').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-8-3.html',
+				id:'yangxia'
+				});
+			});
+			document.getElementById('keshaobin').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9-1.html',
+				id:'keshaobin'
+				});
+			});
+			document.getElementById('chenxinquan').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9-2.html',
+				id:'chenxinquan'
+				});
+			});
+			document.getElementById('chenxiuhua').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9-3.html',
+				id:'chenxiuhua'
+				});
+			});
+			document.getElementById('chenrongzhhong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9-4.html',
+				id:'chenrongzhong'
+				});
+			});
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					//bounce: false,//滚动条是否有弹力默认是true
+					indicators: true, //是否显示滚动条,默认是true
+					deceleration:deceleration
+				});
+				
+			})(mui);
+		</script>
+	 
+   
+	</body>
+
+</html>
+

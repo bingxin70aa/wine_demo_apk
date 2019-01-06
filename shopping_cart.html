@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>购物车</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				background-color: #efeff4;
+			}
+		</style>
+	</head>
+
+	<body>
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">购物车</h1>
+</header>
+
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item " href="index.html" >
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="wine_shop.html" >
+        <span class="mui-icon mui-icon-starhalf"></span>
+        <span class="mui-tab-label">酒铺</span>
+    </a>
+    <a class="mui-tab-item" href="jiuwen.html" >
+        <span class="mui-icon mui-icon-chatboxes"></span>
+        <span class="mui-tab-label">酒闻</span>
+    </a>
+    <a class="mui-tab-item" href="shopping_cart.html" >
+        <span class="mui-icon mui-icon-download"></span>
+        <span class="mui-tab-label">购物车</span>
+    </a>
+    <a class="mui-tab-item" href="mine.html" >
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">我的</span>
+    </a>
+</nav>
+		
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							购物车 6 个
+						</a>
+						
+					</div>
+				</div>
+				
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+							
+							    <li class="mui-table-view-cell mui-media" id="lixiansheng">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/6.jpg">
+							            <div class="mui-media-body">
+							               	 圣芝红酒法国波尔多AOC银奖干红原瓶进口珍藏葡萄酒类整箱6支原装
+							                <p class="mui-ellipsis">¥130.00  </p>
+							            </div>
+							        </a>
+							    </li>
+							   
+							    <li class="mui-table-view-cell mui-media" id="hexichun">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/7.jpg">
+							            <div class="mui-media-body">
+							                	红酒整箱6支装卡诗图赤霞珠干红葡萄酒橡木桶礼盒装酒具套装送礼
+							                <p class="mui-ellipsis">¥99.00</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="yeenlin">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/1.jpg">
+							            <div class="mui-media-body">
+							               	 红酒组合装法国进口干红葡萄酒红酒整箱冰酒洋酒果酒正品12支套装
+							                <p class="mui-ellipsis">¥182.00</p>
+							            </div>
+							        </a>
+							    </li>
+							   <li class="mui-table-view-cell mui-media" id="yeenlin">
+							   		<a href="javascript:;">
+							   				<img class="mui-media-object mui-pull-left" src="images/9.jpg">
+							   				<div class="mui-media-body">
+							   							粉红少女系列 三支套装丨甜起泡酒专享价 魔芳桃红+香奈+荔枝小姐
+							   						<p class="mui-ellipsis">¥82.00</p>
+							   				</div>
+							   		</a>
+							   </li>
+							   <li class="mui-table-view-cell mui-media" id="yeenlin">
+							   		<a href="javascript:;">
+							   				<img class="mui-media-object mui-pull-left" src="images/21.jpg">
+							   				<div class="mui-media-body">
+							   							意大利dile Moscato天使之手莫斯卡托甜白葡萄配制酒微气泡起泡酒
+							   						<p class="mui-ellipsis">¥142.00</p>
+							   				</div>
+							   		</a>
+							   </li>
+							   <li class="mui-table-view-cell mui-media" id="yeenlin">
+							   		<a href="javascript:;">
+							   				<img class="mui-media-object mui-pull-left" src="images/19.jpg">
+							   				<div class="mui-media-body">
+							   							德国进口 圣诞热红酒丨可以热着喝的甜红葡萄酒不酸涩 晚安酒1L
+							   						<p class="mui-ellipsis">¥193.00</p>
+							   				</div>
+							   		</a>
+							   </li>
+							   
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<script >
+	    mui.init();
+	    mui('body').on('tap','a',function(){document.location.href=this.href;});
+		</script>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+		<script>
+	
+		mui.init();
+			document.getElementById('lixiansheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-1.html',
+				id:'lixiansheng'
+				});
+			});
+			
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					//bounce: false,//滚动条是否有弹力默认是true
+					indicators: true, //是否显示滚动条,默认是true
+					deceleration:deceleration
+				});
+				
+			})(mui);
+		</script>
+	 	<script type="text/javascript">
+	     	
+	     mui.init();
+	     
+	 			
+	     (function($){
+	     	$(".mui-scroll-wrapper").scroll({
+	     		//bounce: false,//滚动条是否有弹力默认是true
+	 		    //indicators: false, //是否显示滚动条,默认是true
+	     	});    	
+	     })(mui);
+	     // 监听tap事件，解决 a标签 不能跳转页面问题
+	 	mui('body').on('tap','a',function(){document.location.href=this.href;});
+	 	//mui('body').on('tap','a',function(){document.location.href=this.href;});
+	 	//获得slider插件对象
+	 	var gallery = mui('.mui-slider');
+	 	gallery.slider({
+	 	  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+	 	});
+	     (function($, doc) {
+	 				$.init();
+	 				$.ready(function() {
+	 					
+	 					//级联示例
+	 					var cityPicker3 = new $.PopPicker({
+	 						layer: 3
+	 					});
+	 					cityPicker3.setData(cityData3);
+	 					var showCityPickerButton = doc.getElementById('showCityPicker3');
+	 					var cityResult3 = doc.getElementById('cityResult3');
+	 					showCityPickerButton.addEventListener('tap', function(event) {
+	 						cityPicker3.show(function(items) {
+	 							cityResult3.innerText = "你选择的城市是:" + (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+	 							//返回 false 可以阻止选择框的关闭
+	 							//return false;
+	 						});
+	 					}, false);
+	 				});
+	 			})(mui, document);
+	 	    	    //
+	 	 
+	     </script>
+	 
+   
+	</body>
+
+</html>
+

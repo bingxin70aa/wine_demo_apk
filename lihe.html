@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>礼盒</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+		<style>
+			h5{
+		        padding-top: 8px;
+		        padding-bottom: 8px;
+		        text-indent: 12px;
+		    }
+		    
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+				font-size: 15px;
+				margin-top:8px;
+				color: #333;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="wine_shop.html"></a>
+		    <h1 class="mui-title">礼盒</h1>
+		</header>
+		<div class="mui-content" style="background-color:#fff">
+		    <h5 style="background-color:#efeff4">慢生活</h5>
+		    <ul class="mui-table-view mui-grid-view">
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="images/a.jpg">
+		                <div class="mui-media-body">清新气十足红酒礼盒</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="images/b.jpg">
+		                <div class="mui-media-body">chic风 卧式红酒礼品袋</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#"><img class="mui-media-object" src="images/c.jpg">
+		                <div class="mui-media-body">可爱卡通酒瓶套</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="images/g.jpg">
+		                <div class="mui-media-body">中国风酒礼盒</div></a></li>
+		    </ul>    
+		</div>
+		<div class="mui-content">
+		    <div class="mui-slider">
+		        <div class="mui-slider-group mui-slider-loop">
+		        	<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一个图文表格) -->
+		            <div class="mui-slider-item mui-slider-item-duplicate">
+		                <ul class="mui-table-view mui-grid-view">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="images/a.jpg">
+		                            <div class="mui-media-body">清新气十足红酒礼盒</div></a></li>
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="images/b.jpg">
+		                            <div class="mui-media-body">chic风 卧式红酒礼品袋</div></a></li>
+		                </ul>
+		            </div>
+		            <div class="mui-slider-item">
+		                <ul class="mui-table-view mui-grid-view">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="images/i.jpg">
+		                            <div class="mui-media-body">红酒盒木盒双支</div></a></li>
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="images/d.jpg">
+		                            <div class="mui-media-body">Ins风 酒套装礼盒</div></a></li>
+		                </ul>
+		            </div>
+		            <div class="mui-slider-item">
+		                <ul class="mui-table-view mui-grid-view">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="images/e.jpg">
+		                            <div class="mui-media-body">高档红酒礼品盒</div></a></li>
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="images/f.jpg">
+		                            <div class="mui-media-body">文艺风酒礼盒</div></a></li>
+		                </ul>
+		            </div>
+		            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一个图文表格) -->
+		           
+		        </div>
+		        <div class="mui-slider-indicator" style="position: static;background-color: #fff;">
+		            <span class="mui-action mui-action-previous mui-icon mui-icon-back"></span>
+		            <div class="mui-number">
+		                <span>1</span> / 3
+		            </div>
+		            <span class="mui-action mui-action-next mui-icon mui-icon-forward"></span>
+		        </div>
+		    </div>
+		</div>
+	</body>
+	<script src="js/js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true//启用右滑关闭功能
+		});
+	</script>
+</html>
